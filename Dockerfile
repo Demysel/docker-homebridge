@@ -79,5 +79,10 @@ COPY rootfs /
 EXPOSE 8581/tcp
 #VOLUME /homebridge
 WORKDIR /homebridge
+RUN mkdir -p /data/homebridge
+ENV HOME_DIR=/data/homebridge
+ENV PERSISTENT_STORAGE=/data/homebridge
+
+
 
 ENTRYPOINT [ "/init" ]

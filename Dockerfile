@@ -77,7 +77,7 @@ RUN case "$(uname -m)" in \
 COPY rootfs /
 
 EXPOSE 8581/tcp
-#VOLUME /homebridge
+VOLUME /homebridge
 WORKDIR /homebridge
 
 ENTRYPOINT [ "/init" ]
